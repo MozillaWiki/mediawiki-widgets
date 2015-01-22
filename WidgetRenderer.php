@@ -21,10 +21,10 @@ class WidgetRenderer {
 		$smarty = new Smarty;
 		$smarty->left_delimiter = '<!--{';
 		$smarty->right_delimiter = '}-->';
-		$smarty->compile_dir = "$IP/extensions/Widgets/compiled_templates/";
+		$smarty->compile_dir = __DIR__."/compiled_templates/";
 
 		// registering custom Smarty plugins
-		$smarty->addPluginsDir( "$IP/extensions/Widgets/smarty_plugins/" );
+		$smarty->addPluginsDir( __DIR__."/smarty_plugins/" );
 
 		$smarty->enableSecurity();
 		// These settings were for Smarty v2 - they don't seem to
